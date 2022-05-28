@@ -32,6 +32,7 @@ body {
   color: #ffffff;
 }
 .app-inner-section--heading{
+  text-align: center;
   font-family: "Electroharmonix";
   font-style: normal;
   font-weight: 400;
@@ -76,8 +77,14 @@ body {
   border: 0.3px solid #2effff;
   border-radius: 10px;
 }
+.divider-gradient--small-2 {
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient( 0.25turn, #000000 9.94%, #0de6ef 44.87%, #10ddf2 57.96%, #000000 79.79% );
+    border-image-slice: 1;
+    width: 100%;
+}
 .divider-gradient--small {
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   border-image: linear-gradient(
     0.25turn,
     #000000 9.94%,
@@ -193,9 +200,13 @@ body {
   margin-left: 16px;
 }
 .navbar-nav .nav-item .nav-link {
+  align-items: center;
   font-size: 12px;
   line-height: 19px;
   text-transform: uppercase;
+}
+.nav-icons{
+  align-items: center;
 }
 
 /* section--about */
@@ -220,6 +231,13 @@ body {
 }
 .section--about .section-inner--first .image-wrapper {
   padding: 43px 108px 43px 108px;
+}
+.section--about .section-inner--first .image-wrapper :hover{
+  transform: translate(10px 10px);
+  -webkit-transform: translate(10px 10px);
+  -moz-transform: translate(10px 10px);
+  -ms-transform: translate(10px 10px);
+  -o-transform: translate(10px 10px);
 }
 
 .section--about .section-inner--first .content-box {
@@ -258,8 +276,8 @@ body {
   height: 92px;
   width: fit-content !important;
   margin: 0 auto;
-  padding-left: 34px;
-  padding-right: 34px;
+  /* padding-left: 34px;
+  padding-right: 34px; */
 }
 .section--about .section-inner--second .left-box {
   background-image: url(../assets/images/about/Group\ 48095467.png);
@@ -481,13 +499,13 @@ body {
 
 /* game section */
 .game--section {
-  background-image: url(../assets/images/Frame\ 1.png);
+  background-image: url(../assets/images/banner-3.png);
   min-height: 800px;
 }
 
 .custom-progress-bar--wrapper {
   width: 400px;
-  height: 27px;
+  height: 34px;
   border: 2px solid wheat;
   border-radius: 5px;
   display: flex;
@@ -501,7 +519,7 @@ body {
   margin: 1px 2px;
   width: 45px;
   color: #FFF;
-
+overflow: hidden;
 }
 .custom-progress-bar--wrapper {
   margin: 0 auto;
@@ -521,6 +539,11 @@ body {
 
 .custom-progress-bar--wrapper .bar:first {
   margin-left: 0;
+}
+.gradient-sec{
+  background-image:url(../assets/images/Cyber\ City\ PNG.png);
+  height: 100px;
+
 }
 /* loaders  */
 #loadbar {
@@ -552,7 +575,7 @@ body {
   background-color: #ffffff;
   background-image: -moz-linear-gradient(45deg, #ffffff 25%, #ffffff);
   background-image: -webkit-linear-gradient(45deg, #ffffff 25%, #ffffff);
-  width: 11px;
+  width: 9px;
   height: 26px;
   opacity: 0;
   -webkit-animation: fill .5s linear forwards;
@@ -830,9 +853,9 @@ body {
     background: #000000 !important;
   }
   .mishuzo-content-div p {
-    font-size: 13px;
+    font-size: 13px !important;
     font-weight: 400;
-    line-height: 15px;
+    line-height: 15px !important;
     letter-spacing: 0em;
     text-align: justified;
   }
@@ -850,6 +873,13 @@ body {
     -moz-transform: translate(10px ,400px);
     -ms-transform: translate(10px ,400px);
     -o-transform: translate(10px ,400px);
+  }
+  .team-inner-div h3 {
+    font-size: 30px !important;
+    font-weight: 400;
+    line-height: 24px !important;
+    letter-spacing: 0.105em;
+    text-align: center;
   }
 }
 @media (min-width: 1024px) {
@@ -880,14 +910,14 @@ body {
     color: #ffff;
   }
   .mishuzo-content-div p {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 400;
-    line-height: 15px;
+    line-height: 14px;
     letter-spacing: 0em;
     text-align: justified;
   }
   .team-inner-div-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.295));
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
   }
   .team-second-background {
     background-image: url(../assets/images/our-team/team-2nd-img.png);
@@ -912,9 +942,9 @@ body {
 
 @media (min-width: 768px) {
   .team-inner-div h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 19px;
     letter-spacing: 0.105em;
     text-align: center;
   }
@@ -1174,6 +1204,7 @@ body {
   .roadmap-section--2 {
     margin-top: 20px;
   }
+  
 
   .navbar-hr {
     display: none;
@@ -1332,8 +1363,15 @@ body {
     margin-bottom: 20px;
   }
   .custom-progress-bar--wrapper {
-    width: 90%;
+    width: 70%;
     height: 27px;
+  }
+  .custom-progress-bar--wrapper .bar {
+    height: calc(100% - 2px);
+    margin: 1px 2px;
+    width: 24px;
+    color: #FFF;
+  overflow: hidden;
   }
 
 }
@@ -1356,4 +1394,31 @@ body {
 .team--seaction .lower-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+/* animation */
+
+.hello:hover{
+  transform: translateY(10%) skew(5deg, 5deg);
+  animation: wave 1.5s ease-in-out infinite alternate;
+  -webkit-transform: translateY(10%) skew(5deg, 5deg);
+  -moz-transform: translateY(10%) skew(5deg, 5deg);
+  -ms-transform: translateY(10%) skew(5deg, 5deg);
+  -o-transform: translateY(10%) skew(5deg, 5deg);
+  -webkit-animation: wave 1.5s ease-in-out infinite alternate;
+}
+@keyframes wave {
+  from {
+      transform: translateY(-1%) skew(3deg, 3deg);
+      -webkit-transform: translateY(-1%) skew(3deg, 3deg);
+      -moz-transform: translateY(-1%) skew(3deg, 3deg);
+      -ms-transform: translateY(-1%) skew(3deg, 3deg);
+      -o-transform: translateY(-1%) skew(3deg, 3deg);
+}
+  to {
+      transform: translatey(-2%) skew(8deg, 5deg);
+      -webkit-transform: translatey(-2%) skew(8deg, 5deg);
+      -moz-transform: translatey(-2%) skew(8deg, 5deg);
+      -ms-transform: translatey(-2%) skew(8deg, 5deg);
+      -o-transform: translatey(-2%) skew(8deg, 5deg);
+}
 }
