@@ -104,7 +104,7 @@ body {
     #000000 9.94%,
     #0de6ef 44.87%,
     #10ddf2 57.96%,
-    #000000 79.79%
+    #000000 88.79%
   );
   border-image-slice: 1;
   width: 100%;
@@ -115,11 +115,11 @@ body {
   border-image-slice: 1;
   width: 80% !important;
   margin: 0 auto;
-  transition: 0.5s linear;
-  -webkit-transition: 0.5s linear;
-  -moz-transition: 0.5s linear;
-  -ms-transition: 0.5s linear;
-  -o-transition: 0.5s linear;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
 }
 .Electrolize {
   font-family: "Electrolize", sans-serif;
@@ -1078,12 +1078,15 @@ overflow: hidden;
     justify-content: center;
     margin-bottom: 20px;
   }
+  .header__content{
+    margin-top: 150px !important;
+  }
   .header__section {
     background-image: url(../assets/images/Animation\ \(1\).gif);
-    background-position: center;
+    background-position: 58%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 428px;
+    min-height: 799px;
     transform: translate(10px, -89px);
     -webkit-transform: translate(10px, -89px);
     -moz-transform: translate(10px, -89px);
@@ -1318,6 +1321,18 @@ overflow: hidden;
   }
 }
 @media (max-width: 576px) {
+  .navbar{
+    height: 72px !important;
+  }
+  .navbar-wrapper{
+   min-height: 109px;
+  }
+  .header__content{
+    margin-top: 25px !important;
+  }
+  .header__section{
+    min-height: 400px !important;
+  }
   .about-us-second-sec {
     padding: 0px 27px 0 24px;
     margin-top: 20px;
@@ -1332,7 +1347,7 @@ overflow: hidden;
   }
   .header__section {
     background-image: url(../assets/images/Animation\ \(1\).gif);
-    background-position: center;
+    background-position: 60% 100% !important;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 302px;
@@ -1518,27 +1533,27 @@ overflow: hidden;
 /* animation */
 
 .hello:hover{
-  transform: translateY(5%) skew(5deg, 5deg);
+  transform: translateY(0%) skew(0deg, 0deg);
   animation: wave 3s ease-in-out infinite alternate;
-  -webkit-transform: translateY(5%) skew(5deg, 5deg);
-  -moz-transform: translateY(5%) skew(5deg, 5deg);
-  -ms-transform: translateY(5%) skew(5deg, 5deg);
-  -o-transform: translateY(5%) skew(5deg, 5deg);
+  -webkit-transform: translateY(0%) skew(0deg, 0deg);
+  -moz-transform: translateY(0%) skew(0deg, 0deg);
+  -ms-transform: translateY(0%) skew(0deg, 0deg);
+  -o-transform: translateY(0%) skew(0deg, 0deg);
   -webkit-animation: wave 3s ease-in-out infinite alternate;
 }
 @keyframes wave {
   from {
-      transform: translateY(-2%) skew(2deg, 2deg);
-      -webkit-transform: translateY(-2%) skew(2deg, 2deg);
-      -moz-transform: translateY(-2%) skew(2deg, 2deg);
-      -ms-transform: translateY(-2%) skew(2deg, 2deg);
-      -o-transform: translateY(-2%) skew(2deg, 2deg);
+      transform: translateY(0%) skew(0deg, 0deg);
+      -webkit-transform: translateY(0%) skew(0deg, 0deg);
+      -moz-transform: translateY(0%) skew(0deg, 0deg);
+      -ms-transform: translateY(0%) skew(0deg, 0deg);
+      -o-transform: translateY(0%) skew(0deg, 0deg);
 }
   to {
-      transform: translatey(-2%) skew(3deg, 5deg);
-      -webkit-transform: translatey(-2%) skew(3deg, 5deg);
-      -moz-transform: translatey(-2%) skew(3deg, 5deg);
-      -ms-transform: translatey(-2%) skew(3deg, 5deg);
-      -o-transform: translatey(-2%) skew(3deg, 5deg);
+      transform: translatey(0%) skew(1deg, 3deg);
+      -webkit-transform: translatey(0%) skew(1deg, 3deg);
+      -moz-transform: translatey(0%) skew(1deg, 3deg);
+      -ms-transform: translatey(0%) skew(1deg, 3deg);
+      -o-transform: translatey(0%) skew(1deg, 3deg);
 }
 }
