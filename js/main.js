@@ -2,15 +2,22 @@
 document.addEventListener("click", function handleClick(event) {
   const gradient = document.querySelectorAll(".gradient");
   Array.from(gradient).map((ele) => {
-    ele.style.width = "0px";
-    setTimeout(() => {
+    // ele.style.width = "0px";
+      ele.style.width = "100%";
       ele.classList.add("onclick-gradient");
-    }, 100);
 
     setTimeout(() => {
-      ele.style.width = "100%";
+      ele.classList.add("onclick-gradient-out");
+    }, 150);
+
+    setTimeout(() => {
       ele.classList.remove("onclick-gradient");
-    }, 800);
+    }, 300);
+
+    
+    setTimeout(() => {
+      ele.classList.remove("onclick-gradient-out");
+    }, 900);
   });
 });
 
