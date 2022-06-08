@@ -1,7 +1,12 @@
+*, html {
+
+  scroll-behavior: smooth !important;
+}
 .wholeWrapper {
   background-color: black;
 }
 body {
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 /* Globel variables */
